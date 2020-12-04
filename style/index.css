@@ -1,1 +1,162 @@
 /* Add CSS styling here */
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+
+
+body {
+    margin: 0 auto;
+    text-align: center;
+    max-width: 1280px;
+    font-family: 'Amatic SC', cursive;
+    background-color: #c4cfcb;
+    font-size: 20px;
+}
+
+a {
+    color: black;
+}
+
+header h1 {
+    font-size: 60px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+
+
+}
+header nav a {
+    border: 1px solid black;
+    text-decoration: none;
+    padding: 5px 60px 5px 60px;
+    transition: .5s;   
+
+}
+
+header nav a:first-child {
+    background-color: black;
+    color: white;
+
+}
+
+header nav a:first-child:hover {
+    background-color: #c4cfcb;
+    color: black;
+    border: 1px solid black;
+}
+
+header nav a:hover {
+    color: white;
+    border: none;
+}
+
+.intro h2 {
+    font-size: 40px;
+}
+
+.intro p {
+    text-align: left;
+    padding: 10px 100px 10px 100px;
+}
+.intro .vertical-img {
+    width: 100%;
+    height: 400px;
+    display: block;
+    position: relative;
+    overflow: hidden; 
+}
+
+.intro  img {
+    position: absolute;
+    top: -350px;
+    left: 0;
+    width: 100%;
+}
+.projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-right: 75px; 
+    
+}
+
+.project-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto 0;
+    margin-left: 50px;
+    max-width: 300px;
+    text-align: left;
+    
+}
+
+.projects div {
+    position: relative;
+    display: block;
+    height: 550px;
+    width: 225px;
+    overflow: hidden;
+    display:flex;
+    justify-content: center;
+    
+}
+
+.projects img {
+    height: 100%;
+    margin: auto;
+
+}
+
+.projects .project-p a:hover {
+    color: white;
+}
+
+footer {
+    background-color: #808684;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .contact {
+    margin: auto;
+}
+
+footer .contact a {
+    border: 2px solid black;
+    padding: 5px 60px 5px 60px;
+    text-decoration: none;
+    transition: .5s;
+    background-color: rgb(235, 235, 235);   
+
+}
+
+footer .contact a:hover {
+    border: 2px solid white;
+    background-color: black;
+    color: white;
+}
+
+footer nav {
+    display: flex;
+    margin-left: 400px;
+    margin-right: 400px;
+    justify-content: space-around;
+    margin-bottom: 25px;
+}
+
+footer nav a {
+    text-decoration: none;
+}
+
+footer nav a:hover {
+    color: white;
+}
+
+
+
