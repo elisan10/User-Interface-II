@@ -1,14 +1,38 @@
 /* Add CSS styling here */
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
-
-
+html, body, div, span, applet, object, iframe,  
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,  
+a, abbr, acronym, address, big, cite, code,  
+del, dfn, em, img, ins, kbd, q, s, samp,  
+small, strike, strong, sub, sup, tt, var,  
+b, u, i, center,  
+dl, dt, dd, ol, ul, li,  
+fieldset, form, label, legend,  
+table, caption, tbody, tfoot, thead, tr, th, td,  
+article, aside, canvas, details, embed,  
+figure, figcaption, footer, header, hgroup,  
+menu, nav, output, ruby, section, summary,  
+time, mark, audio, video {  
+margin: 0;  
+padding: 0;  
+/* border: 0;   */
+font-size: 100%;  
+font: inherit;  
+vertical-align: baseline;  
+}
+* {
+    box-sizing: border-box;
+    max-width: 100%;
+}
+html {
+    font-size: 62.5%;
+}
 body {
     margin: 0 auto;
     text-align: center;
-    max-width: 1280px;
     font-family: 'Amatic SC', cursive;
     background-color: #c4cfcb;
-    font-size: 20px;
+    font-size: 225%;
 }
 
 a {
@@ -16,19 +40,19 @@ a {
 }
 
 header h1 {
-    font-size: 60px;
+    font-size: 400%;
 }
 
 header nav{
     display: flex;
     justify-content: center;
-
-
+    align-items:center;
+    padding: 2% 0;
 }
 header nav a {
-    border: 1px solid black;
+    border: 2px solid black;
     text-decoration: none;
-    padding: 5px 60px 5px 60px;
+    padding: .5% 4%;
     transition: .5s;   
 
 }
@@ -42,7 +66,7 @@ header nav a:first-child {
 header nav a:first-child:hover {
     background-color: #c4cfcb;
     color: black;
-    border: 1px solid black;
+    border: 2px solid black;
 }
 
 header nav a:hover {
@@ -51,88 +75,84 @@ header nav a:hover {
 }
 
 .intro h2 {
-    font-size: 40px;
+    font-size: 225%;
+    padding: 1% 0;
 }
 
 .intro p {
+    font-size: 70%;
     text-align: left;
-    padding: 10px 100px 10px 100px;
+    padding: 1% 8%;
 }
-.intro .vertical-img {
+.banner {
+    background-image: url("https://images.unsplash.com/photo-1446729444801-31245ddba81a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+    background-size: cover;
+    background-position: top;
+    height: 30vh;
+    background-attachment: fixed;
+}
+/* .intro .vertical-img {
     width: 100%;
     height: 400px;
     display: block;
     position: relative;
     overflow: hidden; 
-}
+} */
 
-.intro  img {
-    position: absolute;
-    top: -350px;
-    left: 0;
-    width: 100%;
-}
 .projects {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
-    margin-top: 15px;
-    margin-bottom: 15px;
-    margin-right: 75px; 
-    
-}
-
-.project-p {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto 0;
-    margin-left: 50px;
-    max-width: 300px;
-    text-align: left;
+    margin: 2% 0;
+    height: 50vh;
+    max-width: 100%;
     
 }
 
 .projects div {
     position: relative;
     display: block;
-    height: 550px;
-    width: 225px;
     overflow: hidden;
     display:flex;
-    justify-content: center;
+    padding: 0 .5%;
     
 }
-
-.projects img {
-    height: 100%;
-    margin: auto;
-
+.project-p {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 40%;
 }
-
+.project-p p {
+    padding: 3% 8%;
+}
+.project-p a {
+    padding: 3% 8%;
+}
 .projects .project-p a:hover {
     color: white;
 }
 
 footer {
     background-color: #808684;
-    height: 150px;
-    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
 }
 
 footer .contact {
-    margin: auto;
+    width: 100%;
+    padding: 2% 0;
+
 }
 
-footer .contact a {
+footer .contact a {   
     border: 2px solid black;
-    padding: 5px 60px 5px 60px;
     text-decoration: none;
     transition: .5s;
     background-color: rgb(235, 235, 235);   
+    padding: .5% 4%;
 
 }
 
@@ -143,11 +163,10 @@ footer .contact a:hover {
 }
 
 footer nav {
+    width: 50%;
     display: flex;
-    margin-left: 400px;
-    margin-right: 400px;
-    justify-content: space-around;
-    margin-bottom: 25px;
+    justify-content: space-between;
+    padding: 1% 1%;
 }
 
 footer nav a {
@@ -157,6 +176,71 @@ footer nav a {
 footer nav a:hover {
     color: white;
 }
+
+/* Tablet View */
+@media (max-width:800px) {
+
+}
+
+/* Phone View */
+@media (max-width:500px) {
+    body {
+        padding: 3.5%;
+    }
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        height: 20vh
+    }
+    header nav a {
+        padding: 1.5% 7%;
+        width: 30%;
+    }
+    header h1 {
+        font-size: 300%;
+    }
+    .intro h2 {
+        font-size: 200%;
+        padding: 1% 0; 
+    }
+    .intro p {
+        padding: 5% 0;
+    }
+    .banner {
+        height: 25vh;
+    }
+    .projects {
+        flex-direction: column;
+        flex-wrap: wrap;
+        height: 90vh;
+    }
+    .container {
+        height: 70vh;
+        display: flex;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    .projects img {
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+        width: 200px;
+        justify-content: center;
+        align-items: center;
+    }
+    .projects .project-p {
+        max-width: 100%; 
+        text-align: center;
+    }
+    footer{
+        padding: 2% 0;
+    }
+    footer nav {
+        flex-direction: column;
+    }
+}
+
 
 
 
